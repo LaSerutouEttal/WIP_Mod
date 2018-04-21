@@ -1,4 +1,9 @@
-rem @echo off
-rem echo %~f2
-p4 edit %~f2
-@copy %1 %~f2
+@echo on
+ 
+set "sourcePath=%~f1"
+set "targetPath=%~f2"
+ 
+echo "SourcePath : %sourcePath%"
+echo "TargetPath : %targetPath%"
+ 
+@copy "%sourcePath%" "%targetPath%"
